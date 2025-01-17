@@ -1,0 +1,138 @@
+.page-template-contact #wrapper-footer{
+  background-image:url('../img/footer-image-reverse.jpg')
+}
+
+.contact-info{
+  .google-map{
+    height: $spacer * 30;
+    background-color:$grey;
+  }
+  .drop-down{
+    display:none;
+    form{
+      margin-bottom:0;
+    }
+  }
+  //margin-bottom:3rem;
+  .wpcf7{
+    max-width:none;
+  }
+  form{
+    margin-top:$spacer * 3;
+    margin-bottom:$spacer * 5;
+    @include media-breakpoint-down(sm) {
+      margin-top:$spacer * 2;
+      margin-bottom:$spacer * 2;
+    }
+    input, select, textarea{
+      border: $border-width solid $blue !important;
+      border-radius: 0 !important;
+    }
+  }
+  input, select{
+    height:$spacer * 3 !important;
+  }
+
+  .wpcf7 input[type=submit]{
+    border:none !important;
+    height: 3.5rem !important;
+    padding: 0!important;
+    margin: 0!important;
+    max-width: none!important;
+    &:hover{
+      background:transparent;
+    }
+  }
+  .btn{
+  //  background-color:$black !important;
+    color:$white;
+    border:none;
+    padding:0;
+    height:3.5rem;
+    margin:0;
+    line-height:3.5rem;
+   }
+
+  textarea{
+    height: $spacer * 5!important;
+  }
+  .margin-push{
+    margin-top:$spacer * 4.5;
+    @include media-breakpoint-down(sm) {
+      margin-top:$spacer * 2;
+    }
+  }
+  .bg-blue{
+    background-color:$blue;
+  }
+  .white-box{
+    background-color:$white;
+    margin-bottom:$spacer * 2;
+    padding:$spacer * 2.6;
+
+    h5{
+      font-family:$super-font;
+      margin-bottom:$spacer;
+    }
+    .content-box{
+      a{
+        color:$blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.acf-map {
+	width: 100%;
+	height: 400px;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}
+
+
+.contact-white{
+  color:$white;
+  font-size: 1.2rem;
+  margin-bottom:0.5rem;
+  display:block;
+  width:50%;
+  float:left;
+}
+div.wpcf7 input[type="file"]{
+  padding:0 !important;
+  background-color:transparent !important;
+  color:$white !important;
+  height:auto !important;
+  width:50%;
+  float:right;
+}
+.wpcf7 .wpcf7-validation-errors{
+  color: $white !important;
+  border: none !important;
+  background-color:$pink !important;
+  padding:10px !important;
+  text-align:center !important;
+  border-radius: 0 !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+div.wpcf7-mail-sent-ok{
+  border: none !important;
+  margin: 2em 0 !important;
+  background-color:$green !important;
+  color:$white !important;
+  padding:10px !important;
+  text-align:center !important;
+  border-radius: 0 !important;
+}
+.wpcf7 .wpcf7-not-valid-tip{
+  background-color: $pink !important;
+  color: $white !important;
+  text-align: center !important;
+  margin-top: 5px !important;
+  padding: 5px !important;
+}

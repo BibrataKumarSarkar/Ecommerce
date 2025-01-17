@@ -1,0 +1,198 @@
+.award-logo-section{
+  //margin-top:$spacer * 7.5;
+  margin-bottom:7.5rem;
+  @include media-breakpoint-down(sm) {
+    margin-top:$spacer * 2;
+  }
+  .grid{
+    .about-swiper{
+      width:98%;
+    }
+    .swiper-slide{
+
+      border-bottom:1px solid $green;
+      &:nth-child(2n){
+        border-bottom:none;
+      }
+      &.border-right-green{
+        border-right:$border-width solid $green;
+      }
+      &.border-right-yellow{
+        border-right:$border-width solid $yellow;
+      }
+      &.border-right-blue{
+        border-right:$border-width solid $blue;
+      }
+      &.border-right-pink{
+        border-right:$border-width solid $pink;
+      }
+      padding:$spacer * 4;
+      .logo-cell{
+        max-width:120px;
+        width:100%;
+      }
+    }
+  }
+}
+
+.join-us{
+  margin-top:$spacer * 4.5;
+  margin-bottom:$spacer * 4.5;
+  @include media-breakpoint-down(sm) {
+    margin-top:$spacer * 2;
+    margin-bottom:$spacer * 2;
+  }
+  .sticky-boxes{
+    position: sticky;
+    top:$spacer * 2.5;
+    margin-bottom:$spacer * 2;
+  }
+  .join-us-copy{
+    margin-bottom:$spacer * 4;
+    @include media-breakpoint-down(sm) {
+      margin-bottom:$spacer * 2;
+    }
+  }
+  .job-box{
+    position: relative;
+    width:100%;
+    cursor: pointer;
+    .content{
+      display:none;
+    }
+    .arrow,.arrow-two{
+      background-color:grey;
+      height:$spacer;
+      width:$spacer;
+      position:absolute;
+      right:$spacer * 1.5;
+      top:$spacer * 1.7;
+      transform: rotate(45deg);
+      pointer-events: none;
+    }
+    .arrow-two{
+      background-color:$white;
+      top:$spacer * 1.6;
+      transition: 0.1s
+    }
+    &.active{
+      .arrow-two{
+        top:$spacer * 1.8;
+      }
+    }
+    &.color-green{
+      border:$border-width solid $green;
+      h4{
+        color:$green;
+      }
+      .arrow{
+        background-color:$green;
+      }
+    }
+    &.color-blue{
+      border:$border-width solid $blue;
+      h4{
+        color:$blue;
+      }
+      .arrow{
+        background-color:$blue;
+      }
+    }
+    &.color-pink{
+      border:$border-width solid $pink;
+      h4{
+        color:$pink;
+      }
+      .arrow{
+        background-color:$pink;
+      }
+    }
+    &.color-yellow{
+      border:$border-width solid $yellow;
+      h4{
+        color:$yellow;
+      }
+      .arrow{
+        background-color:$yellow;
+      }
+    }
+    &.color-orange{
+      border:$border-width solid $orange;
+      h4{
+        color:$orange;
+      }
+      .arrow{
+        background-color:$orange;
+      }
+    }
+    &.color-grey{
+      border:$border-width solid $grey;
+      h4{
+        color:$grey;
+      }
+      .arrow{
+        background-color:$grey;
+      }
+    }
+
+
+    h4{
+      font-size:$spacer * 1.5;
+      @include media-breakpoint-down(sm) {
+        width:90%;
+        font-size:$spacer * 1.2;
+      }
+      padding-bottom:0;
+      margin-bottom:0;
+      font-family: $bold-font;
+    }
+  }
+}
+
+
+
+.about-form{
+  padding:$spacer * 3;
+  @include media-breakpoint-down(sm) {
+    padding: $spacer * 2;
+  }
+  h4{
+    font-family: $bold-font;
+    margin-bottom:$spacer * 2;
+  }
+  &.black-form{
+    input {
+      font-size:$xs-type;
+    }
+  }
+  .wpcf7-form-control{
+    margin-bottom:0;
+    margin-top:0;
+  }
+  .wpcf7 textarea{
+    height:100px;
+    font-size:$xs-type;
+    border-radius: 0;
+  }
+  select{
+    font-size:$xs-type;
+  }
+  .btn{
+    height: $spacer * 3.5;
+    padding: 0;
+    margin: 0;
+    max-width:none;
+    //width:50%;
+    input:hover{
+      background:transparent;
+      color:$black;
+    }
+    input{
+      padding:0;
+      margin:0;
+      width:100%;
+      height:100%;
+      color:$white;
+    }
+  }
+}

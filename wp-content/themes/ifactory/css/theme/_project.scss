@@ -1,0 +1,324 @@
+.our-work{
+  margin-top:$spacer * 4.5;
+  // When "Case Studies Only" is selected
+  .case-studies-only.selected:before {
+    background-color: $yellow;
+  }
+  h2{
+    margin-bottom:0;
+    @include media-breakpoint-down(md) {
+      margin-top:$spacer;
+      margin-bottom:$spacer;
+    }
+  }
+  h3{
+    font-size:$xs-type;
+    font-family:$bold-font;
+  }
+  article{
+    overflow: visible;
+    margin-bottom:$spacer * 7.5;
+    @include media-breakpoint-down(md) {
+      margin-bottom:$spacer * 3;
+    }
+    .little-link{
+      font-size:$smallcopy;
+      text-decoration: underline;
+      &:hover{
+        color:$pink;
+      }
+    }
+    .btn{
+      color:$white;
+      @include media-breakpoint-down(md) {
+        //min-width:250px;
+      }
+    }
+    .gallery-holder{
+      &.if-processed {
+        &::after {
+        //  content: '# of Images is less than or equal to 3';
+        }
+      }
+      &.thumbs-over-3 {
+        &::after {
+        //  content: '# of Images is between 4 and 6';
+        }
+      }
+      &.thumbs-over-6 {
+        &::after {
+        //  content: '# of Images is between 7 and 9';
+        }
+      }
+      &.thumbs-over-9 {
+        &::after {
+        //  content: '# of Images is between 10 and 12';
+        }
+      }
+      &.thumbs-over-12 {
+        &::after {
+        //  content: '# of Images is between 12 and 14';
+        }
+      }
+    //  height:50vh;
+      //width:100%;
+      //position: relative;
+      .swiper-container {
+        width: 100%;
+        height:90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+      }
+      .gallery-top {
+        height:30vh;
+        width: 100%;
+        @include media-breakpoint-down(md) {
+          height:50vh;
+        }
+      }
+      .gallery-thumbs {
+        height:11vh;
+        box-sizing: border-box;
+        padding: 10px 0;
+        @include media-breakpoint-down(md) {
+          height:20vh;
+        }
+      }
+      .gallery-thumbs .swiper-slide {
+        width: 25%;
+        height: 90%;
+        opacity: 0.4;
+      }
+      .gallery-thumbs .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+.case-studies-page{
+  &.text-and-img{
+    .row{
+      padding-top:7vh;
+      @include media-breakpoint-down(lg) {
+        padding-top:2vh;
+      }
+      &:last-child(){
+        padding-bottom:7vh;
+        @include media-breakpoint-down(lg) {
+          padding-top:2vh;
+        }
+      }
+    }
+  }
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height:80vh;
+  @include media-breakpoint-down(md) {
+    min-height:auto;
+    padding:0 !important;
+  }
+  .case-cols{
+    //margin-top:20vh;
+    //margin-bottom:20vh;
+    .spacer-2{
+      padding:30px 0;
+      @include media-breakpoint-down(md) {
+        padding:10px 0;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      padding:60px 0 40px !important;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top:0 !important;
+      margin-bottom:0 !important;
+      padding:0 15px !important;
+      .half-background{
+        display:none;
+      }
+      & > div{
+        margin-top:0 !important;
+        margin-bottom:0 !important;
+        padding:20px 0 30px !important;
+      }
+    }
+  }
+  .half-background{
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    min-height:80vh;
+    width:100%;
+    margin:0;
+    height:100%;
+  }
+  .case-copy-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:50vh;
+    @include media-breakpoint-down(lg) {
+      min-height:0;
+      .content-inner{
+        width:100%;
+      }
+    }
+    .content-inner{
+      width:70%;
+    }
+  }
+  .img-bg{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height:50vh;
+    width:100%;
+  }
+}
+.services-bg{
+  .text{
+    margin-top:$spacer * 1.4;
+    margin-bottom:$spacer * 2;
+    line-height: 1.2rem;
+  }
+  .circle{
+    height:80px;
+    width:80px;
+    border-radius: 15% !important;
+    transform: rotate(45deg);
+    &:after{
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:50px;
+      content: ' ';
+      height: 80px;
+      width: 80px;
+      position: absolute;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.corporate-identity{
+  .circle:after{
+    background-image:url("../img/icons/corp-idenity.png");
+
+  }
+}
+.digital-marketing{
+  .circle:after{
+    background-image:url("../img/icons/marketing.png");
+  }
+}
+.search-engine-optimisation{
+  .circle:after{
+    background-image:url("../img/icons/seo.png");
+  }
+}
+.ux-design{
+  .circle:after{
+    background-image:url("../img/icons/ux.png");
+  }
+}
+.application-development{
+  .circle:after{
+    background-image:url("../img/icons/apps.png");
+  }
+}
+.content-management-system{
+  .circle:after{
+    background-image:url("../img/icons/contentmanagment.png");
+  }
+}
+.ecommerce{
+  .circle:after{
+    background-image:url("../img/icons/eccomerce.png");
+  }
+}
+.web-development{
+  .circle:after{
+    background-image:url("../img/icons/web-dev.png");
+  }
+}
+.digital-strategy{
+  .circle:after{
+    background-image:url("../img/icons/strats.png");
+  }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom:-20px !important;
+  z-index:100;
+}
+.swiper-pagination-bullet{
+  height:50px !important;
+  width:50px !important;
+  border-radius:0 !important;
+  z-index:500 !important;
+}
+.swiper-pagination-bullet{
+  //background-color:$white !important;
+
+  background-color:transparent !important;
+  &:after{
+    height:2px;
+    width:50px;
+    background-color:$white;
+    position: absolute;
+    left:0;
+    bottom: calc(50% - 2.5px);
+    content:'';
+  }
+}
+.swiper-pagination-bullet-active{
+  &:after{
+    background-color:$pink !important;
+    height:2px;
+    width:50px;
+    position: absolute;
+    left:0;
+    bottom: calc(50% - 2.5px);
+    content:'';
+  }
+}
+.gallery-holder{
+  .swiper-pagination-bullet{
+    background-color:transparent !important;
+    &:after{
+      height:2px;
+      width:50px;
+      background-color:$black;
+      position: absolute;
+      left:0;
+      bottom: calc(50% - 2.5px);
+      content:'';
+    }
+    //opacity:0.8 !important;
+  }
+  .swiper-pagination-bullet-active{
+    &:after{
+      background-color:$pink !important;
+      height:2px;
+      width:50px;
+      position: absolute;
+      left:0;
+      bottom: calc(50% - 2.5px);
+      content:'';
+    }
+  }
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{
+  transform: scale(.85) !important;
+  opacity:0.4 !important;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{
+  transform: scale(.8)  !important;
+  opacity:0.2 !important;
+}

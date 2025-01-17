@@ -1,0 +1,414 @@
+//General styles
+
+body{
+  font-family:$reg-font ;
+  color:$black;
+  font-smooth: always;
+}
+.grecaptcha-badge{
+  display:none !important;
+}
+//font sizes{
+
+h2{
+  font-size:$lg-type;
+  font-family: $super-font;
+  margin-bottom:$spacer;
+}
+.inner-page h2{
+  font-size:1.8rem;
+  @include media-breakpoint-down(sm) {
+    font-size:1.3rem;
+    margin-bottom:1.6rem;
+  }
+}
+h3{
+ margin-bottom:$spacer * 2.5;
+ font-family: $bold-font;
+}
+h4{
+  font-family: $bold-font;
+}
+
+@include media-breakpoint-down(sm) {
+  h1{
+    font-size: $spacer * 1.5;
+  }
+  h2{
+    font-size:$spacer * 2;
+  }
+  h3{
+
+  }
+}
+//a
+
+a{
+  transition:0.18s;
+}
+
+
+.wrapper{
+    padding:0;
+}
+
+//btn
+.btn, .nav-links a{
+  max-width:282px;
+  @include media-breakpoint-down(sm) {
+    max-width:none;
+  }
+  line-height:50px;
+  text-transform: uppercase;
+  display:inline-block;
+  font-weight:900;
+  font-size:1rem;
+  font-family: $super-font;
+}
+.btn, .blog-block, .nav-links a{
+  border-radius: 0;
+  width:100%;
+  position: relative;
+  transition:0.18s;
+
+  z-index:5;
+  &:before{
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition:0.18s;
+  }
+  &:after{
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition:0.18s;
+  }
+  &.btn-white{
+    &:before{
+      background-color:$white;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+  &.btn-black{
+    color:$white;
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$black;
+    }
+    &:after{
+      background-color:$yellow;
+    }
+  }
+  &.btn-black-pink{
+    color:$white;
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$black;
+
+    }
+    &:after{
+      background-color:$pink;
+    }
+  }
+  &.btn-pink{
+    color:$white;
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$pink;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+
+  &.btn-applications, &.btn-menu-blue{
+    color:$white;
+    &:hover{
+      color:$white !important;
+    }
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$blue;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+  &.btn-ecommerce,&.btn-menu-green{
+    color:$white;
+    &:hover{
+      color:$white !important;
+    }
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$green;
+    }
+    &:after{
+      background-color:$black;
+
+    }
+  }
+  &.btn-digital-marketing, &.btn-digital, &.btn-menu-pink{
+    color:$white;
+    &:hover{
+      color:$white !important;
+    }
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$pink;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+  &.btn-technology, &.btn-menu-yellow{
+    color:$white;
+    &:hover{
+      color:$white !important;
+    }
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$yellow;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+  &.btn-menu-orange{
+    color:$white;
+    &:hover{
+      color:$white !important;
+    }
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$orange;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+  &.btn-menu-grey{
+    color:$white;
+    &:hover{
+      color:$white !important;
+    }
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$grey;
+    }
+    &:after{
+      background-color:$black;
+    }
+  }
+  &.btn-yellow{
+    color:$white;
+    &:before{
+      background-color:$yellow;
+    }
+    &:after{
+      background-color:$white;
+    }
+  }
+  &:hover{
+    &:before{
+      height:0%;
+    }
+    &:after{
+      height:100%;
+    }
+    &.btn-white{
+      color:$white;
+    }
+    &.btn-black{
+      //color:$black;
+    }
+  }
+}
+.nav-links {
+  margin-left:0;
+  margin-right:0;
+  margin-bottom:$spacer * 7.5;
+  a{
+    color:$white;
+    font-size:0.8rem;
+    line-height:1rem;
+    padding:1rem;
+    //border-bottom: 2px solid $black;
+    &:before{
+      background-color:$black;
+    }
+    &:after{
+      background-color:$yellow;
+    }
+  }
+}
+//Carosel
+.swiper-container {
+     width: 100%;
+     height: 100%;
+   }
+.swiper-slide {
+  text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
+//black bars
+
+.black-bar{
+  background-color:$black;
+  color:$white;
+  margin: ($spacer * 5) auto;
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $spacer * 2;
+    margin-top:0;
+  }
+  width:100%;
+  &>.container{
+    padding-top:($spacer * 2);
+    padding-bottom:($spacer * 2);
+    h3{
+      margin-bottom:$spacer;
+      font-weight:900;
+    }
+  }
+}
+
+.black-form{
+  background-color:$black;
+  padding-top:$spacer * 3;
+  padding-bottom: $spacer * 3;
+  a{
+    color:$white;
+    text-decoration: underline;
+    &:hover{
+      color:$yellow;
+    }
+  }
+  h4,p{
+    color:$white;
+  }
+  p{
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+  .wpcf7-form-control{
+    @include media-breakpoint-down(sm) {
+      margin-bottom:30px;
+      margin-top:30px;
+    }
+  }
+  input,select,text-area {
+    height: $spacer * 3.5 !important;
+    border: none  !important;
+    border-radius: 0  !important;
+    &.wpcf7-email{
+      font-size:$sm-type;
+    }
+  }
+  .btn{
+    height: $spacer * 3.5;
+    padding: 0;
+    margin: 0;
+    max-width:none;
+    input:hover{
+      background:transparent;
+      color:$black;
+    }
+    input{
+      padding:0;
+      margin:0;
+      width:100%;
+      height:100%;
+      color:$white;
+    }
+  }
+}
+.post-navigation{
+  display:none;
+}
+
+// Progress Icon
+.progress-icon {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  font-size: 10rem;
+  text-align: center;
+}
+.upload-btn{
+  position: absolute;
+  top: 0;
+  width: 129px;
+  pointer-events:none;
+  cursor: pointer;
+  z-index:10;
+  line-height: 3.5rem;
+  display:none;
+}
+body.search .page-content #searchform .input-group {
+  .input-group-append{
+    input{
+      line-height:15px;
+    }
+  }
+  input{
+    line-height:50px;
+    border-radius:0;
+    height:50px;
+  }
+}
+.applications p, .blue p{
+  a{
+    color:$blue;
+  }
+}
+.digital-marketing p, .digital p, .pink p{
+  a{
+    color:$pink;
+  }
+}
+.technology p, .yellow p{
+  a{
+    color:$yellow;
+  }
+}
+.ecommerce p, .green p{
+  a{
+    color:$green;
+  }
+}
+.orange p{
+  a{
+    color:$orange;
+  }
+}
+.web-design p, .grey p{
+  a{
+    color:#9f9f9e;
+  }
+}

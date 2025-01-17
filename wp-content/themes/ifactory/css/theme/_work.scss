@@ -1,0 +1,259 @@
+@include media-breakpoint-down(sm) {
+  #ifactory-posts{
+    .btn-black-pink{
+      float:none !important;
+    }
+  }
+}
+
+.our-work{
+  .reset-filters{
+    max-width:none !important;
+  }
+  .filters{
+    border-bottom: 1px solid $black;
+    padding-bottom: $spacer * 1.2;
+    margin-bottom: $spacer * 3;
+  }
+  ul.list-group-item{
+    position: sticky;
+    top: $spacer;
+    border:none !important;
+    padding: 0 0 $spacer !important;
+    margin: 0 0 $spacer;
+    font-size: .9rem;
+    list-style: none;
+    background-color: #e4e4e4;
+    .list-group-item{
+      border:none;
+      background-color:transparent;
+      padding: .5rem 1rem!important;
+      &:hover {
+        a {
+          color: $pink !important;
+        }
+      }
+      &.title{
+        //background-color:$black !important;
+        padding:0 !important;
+        margin-bottom:$spacer * .5;
+        a{
+          text-decoration: none;
+          @include media-breakpoint-down(lg) {
+            &.btn{
+              max-width:none !important;
+            }
+          }
+        }
+        &:hover{
+          a{
+            color:$white !important;
+          }
+        }
+      }
+      // Category is selected
+      a.selected {
+        color: $pink;
+      }
+    }
+  }
+}
+
+
+.case-studies-only{
+  @include media-breakpoint-down(lg) {
+    &.btn{
+      max-width:none !important;
+    }
+  }
+}
+
+.tags{
+  margin-top: $spacer * 2;
+}
+  a.btn.tag{
+    color: $black;
+    text-decoration: underline;
+    border: 1px solid $black;
+    padding: $spacer * 0.5;
+    font-family: "Akzidenz-Grotesk Std Bold";
+    display: inline-block;
+    margin-bottom: $spacer;
+    width: auto !important;
+    min-width: none !important;
+    text-decoration: none!important;
+    background-color: transparent !important;
+    font-size: $spacer;
+    line-height:$spacer * 1.5;
+    text-transform: inherit;
+    margin-right:$spacer * 0.5;
+    @include media-breakpoint-down(lg) {
+      min-width: 0;
+      margin-bottom: .5rem;
+    }
+
+    &:hover{
+      color: #fff!important;
+      background-color: #000 !important;
+    }
+
+    // Tag is selected
+    &.selected {
+      background: $black !important;
+      color: $white;
+    }
+  }
+
+  /*.single-project.case-gallery{
+    height:80vh;
+    width:100%
+  }
+  .single-project.case-galler .swiper-wrapper .swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }*/
+
+.services-bg{
+  padding-top:$spacer * 3;
+  padding-bottom:$spacer * 3;
+  @include media-breakpoint-down(lg) {
+    padding-top:0;
+  }
+  h3{
+    text-align:center;
+    padding-bottom:$spacer;
+  }
+ .tag{
+    //margin:0 30px;
+    .text{
+      font-family: "Akzidenz-Grotesk Std Bold";
+      text-align:center;
+    }
+  }
+.circle{
+  height: 80px;
+  width:80px;
+  //background-color:$black;
+  border-radius:50%;
+  margin:0 auto 10px;
+  }
+
+}
+
+
+.gallery-case{
+  background-color:$black;
+  padding-top:10rem;
+  padding-bottom:10rem;
+  @include media-breakpoint-down(lg) {
+    padding-top:4rem;
+    padding-bottom:3rem;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top:2rem;
+    padding-bottom:2rem;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    background-color: $black;
+    border-radius: 50%;
+    padding: 25px;
+    top:45%;
+  }
+  .swiper-slide{
+    background-color:transparent;
+  }
+  .swiper-button-next{
+    background-image:url("../img/arrow-right-grey.png") !important;
+  }
+  .swiper-button-prev{
+    background-image:url("../img/arrow-left-grey.png") !important;
+  }
+  .swiper-button-next{
+    right:-15px;
+  }
+  .swiper-button-prev{
+    left:-15px;
+  }
+  .case-gallery{
+    img{
+      display:block;
+      width:100%;
+    }
+    .caption{
+      color:$white;
+      display:block;
+      //background-color:$black;
+      text-align:left;
+      padding-top:$spacer * 1.5;
+    }
+  }
+}
+
+.case-study-thumbnails{
+  max-width:1800px;
+  padding-left:40px;
+  padding-right:40px;
+  .swiper-button-next, .swiper-button-prev{
+    top:57%;
+  }
+  .swiper-button-next{
+    right:-20px;
+  }
+  .swiper-button-prev{
+    left:-20px;
+  }
+}
+
+.case-study-slider{
+
+    //top:300px;
+
+
+  h3{
+    margin-top:$spacer * 3;
+    text-align:center;
+  }
+  .swiper-wrapper{
+    margin-top:$spacer * 3;
+    margin-bottom:$spacer * 3;
+    .swiper-slide{
+      display: block;
+      text-align:center;
+      height:350px;
+      @include media-breakpoint-down(sm) {
+        height:200px;
+      }
+      background-size:cover;
+      background-position:left top;
+      background-repeat: no-repeat;
+      &:hover{
+        .hover-effect{
+          background-color:rgba(0,0,0,0.8);
+          opacity:1;
+        }
+      }
+      .hover-effect{
+        background-color:rbga(0,0,0,0);
+        opacity:0;
+        height:350px;
+        @include media-breakpoint-down(sm) {
+          height:200px;
+        }
+        transition:0.3s;
+        h4{
+          padding-top:110px;
+          @include media-breakpoint-down(sm) {
+            padding-top: 40px;
+          }
+          display:block;
+          color:#fff;
+        }
+        .btn{
+          margin-top:20px;
+          background-color:$white;
+        }
+      }
+    }
+  }
+}

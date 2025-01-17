@@ -1,0 +1,850 @@
+.inner-page, .post .wrapper, .background-patten{
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size:273px 1027px;
+}
+
+.applications.hero-inner,
+.applications-template-default  .hero-inner{
+  &:before{
+    background:$blue !important;
+  }
+}
+.page-template-contact  .hero-inner{
+  &:before{
+    background: #2c769b; /* Old browsers */
+    background: -moz-linear-gradient(left, #ca3027 16%, #d8821c 34%, #d8c234 51%, #80ba35 69%, #2c769b 91%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ca3027 16%, #d8821c 34%, #d8c234 51%, #80ba35 69%, #2c769b 91%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ca3027 16%, #d8821c 34%, #d8c234 51%, #80ba35 69%, #2c769b 91%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c769b', endColorstr='#ca3027',GradientType=1 ); /* IE6-9 */
+  }
+}
+.ecommerce.hero-inner,
+.ecommerce-template-default  .hero-inner{
+  &:before{
+    background:$green  !important;
+  }
+}.digital-marketing.hero-inner, .digital.hero-inner,
+.digital-template-default  .hero-inner,
+.digital-marketing-template-default  .hero-inner
+{
+  &:before{
+    background:$pink  !important;
+  }
+}
+.technology.hero-inner,
+.technology-template-default  .hero-inner{
+  &:before{
+    background:$yellow  !important;
+  }
+}
+
+
+.hero-inner{
+  background-image:url('../img/chairs.jpg');
+  &:before{
+    z-index:-1;
+    position:absolute;
+    background: #2c769b; /* Old browsers */
+    background: -moz-linear-gradient(left, #2c769b 16%, #80ba35 34%, #d8c234 51%, #d8821c 69%, #ca3027 91%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #2c769b 16%,#80ba35 34%,#d8c234 51%,#d8821c 69%,#ca3027 91%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #2c769b 16%,#80ba35 34%,#d8c234 51%,#d8821c 69%,#ca3027 91%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c769b', endColorstr='#ca3027',GradientType=1 ); /* IE6-9 */
+    height:30rem;
+    @include media-breakpoint-down(md) {
+      height:$spacer * 15;
+    }
+    width:100%;
+    content:' ';
+    top:0;
+    left:0;
+  }
+
+  height:$spacer * 30;
+  //background-color:$grey;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2c769b+16,80ba35+34,d8c234+51,d8821c+69,ca3027+91 */
+
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  @include media-breakpoint-down(md) {
+    height:$spacer * 15;
+
+  }
+  .title-block{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height:$spacer * 30;
+    @include media-breakpoint-down(md) {
+      height:$spacer * 15;
+    }
+    h1{
+        color:$white;
+        font-size:$lg-type;
+        @include media-breakpoint-down(lg) {
+          font-size:2rem;
+        }
+        @include media-breakpoint-down(md) {
+          font-size:1.5rem;
+        }
+        font-family: $super-font;
+        text-align:center;
+        margin-bottom:$spacer * 2;
+        margin-top:$spacer * 2;
+        text-shadow: 1px 1px $black;
+        @include media-breakpoint-down(sm) {
+          //font-size:2.5rem;
+          margin-bottom:$spacer * 1.2;
+        }
+    }
+    h3{
+      font-size:$sm-type;
+      text-transform: uppercase;
+      color:$white;
+      text-align:center;
+      font-family: $reg-font;
+      font-weight: 400;
+      text-shadow: 1px 1px $black;
+      @include media-breakpoint-down(lg) {
+        font-size:1.2rem;
+      }
+    }
+  }
+}
+
+.container.services-page{
+  max-width:1400px;
+  padding:0;
+  @include media-breakpoint-down(lg) {
+    padding-left:15px;
+    padding-right:15px;
+  }
+}
+
+.intro-services{
+  max-width:1400px;
+  padding-bottom:4.5rem;
+  padding-left:0;
+  padding-right:0;
+  padding-top:4.5rem;
+  @include media-breakpoint-down(lg) {
+    padding-left:15px;
+    padding-right:15px;
+  }
+  .btn{
+    float:right;
+    @include media-breakpoint-down(lg) {
+      float:left;
+    }
+  }
+}
+.services h5{
+  font-size:12px;
+  margin-top:5px;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+.two-columns{
+  margin-top:4.5rem;
+  @include media-breakpoint-down(lg) {
+    margin-top:2.5rem;
+  }
+
+  h2{
+    font-size:$spacer * 2;
+    @include media-breakpoint-down(lg) {
+      font-size: $spacer * 1.5;
+
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 1230px;
+  }
+
+  span{
+    text-transform: uppercase;
+    margin-bottom: 1.3rem;
+    font-size: .8rem;
+    display: block;
+  }
+  .stat-block{
+    color:$white;
+    .number{
+      font-family: $super-font;
+      font-size:5rem;
+      text-align:center;
+    }
+    .content{
+      font-size:1.2rem;
+      line-height: 1.4rem;
+    }
+    .source{
+      padding-top:$spacer * 0.5;
+      padding-bottom:$spacer * 0.5;
+      font-size:0.8rem;
+      font-style: italic;
+    }
+    .flex-center{
+      display: flex;
+      align-items: center;
+      height:100%;
+    }
+  }
+  .service-main-sec{
+    h2{
+      margin-bottom:1.5rem;
+    }
+  }
+  .service-intro{
+      margin-bottom:$spacer * 2.5;
+      font-family: $super-font;
+      padding-bottom: .5rem;
+      font-size: 1.8rem;
+      line-height:2.2rem;
+      @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+        line-height:1.6rem;
+        margin-bottom:$spacer;
+      }
+      color:$grey;
+    }
+    .single-posts{
+      &.ad-section{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .overlay{
+          background-color:rgba(0,0,0,0.3);
+          height:100%;
+          padding:$spacer * 3;
+          h2{
+            color:$white;
+            width:60%;
+            @include media-breakpoint-down(md) {
+                width:100%;
+            }
+          }
+          div{
+            color:$white;
+            width:60%;
+            @include media-breakpoint-down(md) {
+                width:100%;
+            }
+          }
+        }
+      }
+      .btn{
+        margin-top:$spacer * 2;
+      }
+      margin-bottom:$spacer * 3;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: $spacer * 2;
+        margin-top: $spacer * 4;
+      }
+    }
+    aside{
+      top:20px;
+      position:sticky!important;
+      margin-bottom:$spacer * 2;
+      transition: 0.18s;
+      .services{
+        background-color:transparent !important;
+        border: 1px solid;
+      }
+
+
+      .aside-menu, .services{
+        margin-bottom:$spacer;
+        .btn{
+            max-width: none;
+        }
+        h4{
+          font-family: $super-font;
+          color:$white ;
+          margin-bottom:0;
+
+        }
+        & > div{
+
+          padding:1rem;
+          font-size:0.9rem;
+          //background-color:$lightGrey;
+        }
+
+        ul{
+          padding:0;
+          margin:0;
+          //padding:1rem;
+          font-size:0.9rem;
+          list-style: none;
+          //background-color:$lightGrey;
+          li{
+            margin:0;
+            padding:0;
+            line-height:2rem;
+            a{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .aside-menu{
+      ul{
+        li{
+          a{
+            color:$white;
+
+          }
+        }
+      }
+      a.btn{
+
+        color:$white;
+        text-decoration:none;
+          &:before{
+            background-color:transparent;
+          }
+          &:after{
+            background-color: $black !important;
+            color:$white;
+          }
+        }
+    }
+    /*color changes*/
+    .btn{
+
+      color:$white;
+      border:none;
+      &:before{
+        background-color:$black;
+      }
+    }
+    .applications-text,.digital-text, .digital-marketing-text,.ecommerce-text{
+      background-color:$white !important;
+      .service-content{
+        color:$black !important;
+        a{
+          color:$black !important;
+        }
+      }
+    }
+    .applications-text{
+      border-top:1px solid $blue !important;
+      h5{
+        color:$blue;
+      }
+      .service-content{
+        a:hover{
+          color:$blue !important;
+        }
+      }
+    }
+    .websites-text,.web-design-text{
+      border-top:1px solid $dark-grey !important;
+      h5{
+        color:$dark-grey;
+      }
+      .service-content{
+        a:hover{
+          color:$dark-grey !important;
+        }
+      }
+    }
+    .digital-text, .digital-marketing-text{
+      border-top:1px solid $pink !important;
+      h5{
+        color:$pink;
+      }
+      .service-content{
+        a:hover{
+          color:$pink !important;
+        }
+      }
+    }
+    .ecommerce-text{
+      border-top:1px solid $green !important;
+      h5{
+        color:$green;
+      }
+      .service-content{
+        a:hover{
+          color:$green !important;
+        }
+      }
+    }
+
+
+    &.blue, &.applications{
+
+        .stat-block{
+          background-color:$blue;
+        }
+        .service-main-sec{
+          h1,h2,h3,h4,h5{
+            color:$blue;
+          }
+        }
+        article{
+          h2{
+            color:$blue;
+          }
+        }
+        span{
+          color:$blue;
+        }
+        .btn{
+          &:after{
+            background-color:$blue;
+          }
+        }
+        .services{
+          border-color:$blue;
+          .btn{
+            &:before{
+              background-color:$blue;
+            }
+            &:after{
+              background-color:$black;
+            }
+          }
+          ul{
+            li{
+              a{
+                &:hover{
+                  color:$blue;
+                }
+              }
+            }
+          }
+        }
+        .aside-menu{
+          ul{
+            li{
+              a{
+                &:hover{
+                  color:$blue;
+                }
+              }
+            }
+          }
+          h4{
+            a{
+              padding-left:$spacer * 1;
+              line-height: 50px;
+              text-transform: uppercase;
+              display: inline-block;
+              font-size: 1rem;
+              font-family: $super-font;
+            }
+          }
+          background-color:$blue;
+          transition:0.18s;
+          &:hover{
+            background-color:$dark-blue;
+          }
+        }
+      }
+      &.pink, &.digital, &.digital-marketing{
+          .stat-block{
+            background-color:$pink;
+          }
+          .service-main-sec{
+            h1,h2,h3,h4,h5{
+              color:$pink;
+            }
+          }
+          article{
+            h2{
+              color:$pink;
+            }
+          }
+          span{
+            color:$pink;
+          }
+          .btn{
+            &:after{
+              background-color:$pink;
+            }
+          }
+          .services{
+            border-color:$pink;
+            .btn{
+              &:before{
+                background-color:$pink;
+              }
+              &:after{
+                background-color:$black;
+              }
+            }
+            ul{
+              li{
+                a{
+                  &:hover{
+                    color:$pink;
+                  }
+                }
+              }
+            }
+          }
+          .aside-menu{
+            ul{
+              li{
+                a{
+                  &:hover{
+                    color:$pink;
+                  }
+                }
+              }
+            }
+            h4{
+              a{
+                padding-left:$spacer * 1;
+                line-height: 50px;
+                text-transform: uppercase;
+                display: inline-block;
+                font-size: 1rem;
+                font-family: $super-font;
+              }
+            }
+            background-color:$pink;
+            transition:0.18s;
+            &:hover{
+              background-color:$dark-pink;
+            }
+          }
+        }
+        &.green, &.ecommerce{
+            .stat-block{
+              background-color:$green;
+            }
+            .service-main-sec{
+              h1,h2,h3,h4,h5{
+                color:$green;
+              }
+            }
+            article{
+              h2{
+                color:$green;
+              }
+            }
+            span{
+              color:$green;
+            }
+            .btn{
+              &:after{
+                background-color:$green;
+              }
+            }
+            .services{
+              border-color:$green;
+              .btn{
+                &:before{
+                  background-color:$green;
+                }
+                &:after{
+                  background-color:$black;
+                }
+              }
+              ul{
+                li{
+                  a{
+                    &:hover{
+                      color:$green;
+                    }
+                  }
+                }
+              }
+            }
+            .aside-menu{
+              ul{
+                li{
+                  a{
+                    &:hover{
+                      color:$green;
+                    }
+                  }
+                }
+              }
+              h4{
+                a{
+                  padding-left:$spacer * 1;
+                  line-height: 50px;
+                  text-transform: uppercase;
+                  display: inline-block;
+                  font-size: 1rem;
+                  font-family: $super-font;
+                }
+              }
+              background-color:$green;
+              transition:0.18s;
+              &:hover{
+                background-color:$dark-green;
+
+              }
+            }
+          }
+          &.yellow, &.technology{
+              .stat-block{
+                background-color:$yellow;
+              }
+              .service-main-sec{
+                h1,h2,h3,h4,h5{
+                  color:$yellow;
+                }
+              }
+              article{
+                h2{
+                  color:$yellow;
+                }
+              }
+              span{
+                color:$yellow;
+              }
+              .btn{
+                &:after{
+                  background-color:$yellow;
+                }
+              }
+              .services{
+                border-color:$yellow;
+                .btn{
+                  &:before{
+                    background-color:$yellow;
+                  }
+                  &:after{
+                    background-color:$black;
+                  }
+                }
+                ul{
+                  li{
+                    a{
+                      &:hover{
+                        color:$yellow;
+                      }
+                    }
+                  }
+                }
+              }
+              .aside-menu{
+                ul{
+                  li{
+                    a{
+                      &:hover{
+                        color:$yellow;
+                      }
+                    }
+                  }
+                }
+                h4{
+                  a{
+                    padding-left:$spacer * 1;
+                    line-height: 50px;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    font-size: 1rem;
+                    font-family: $super-font;
+                  }
+                }
+                background-color:$yellow;
+                transition:0.18s;
+                &:hover{
+                  background-color:$dark-yellow;
+                }
+              }
+            }
+            &.orange{
+                .stat-block{
+                  background-color:$orange;
+                }
+                .service-main-sec{
+                  h1,h2,h3,h4,h5{
+                    color:$orange;
+                  }
+                }
+                article{
+                  h2{
+                    color:$orange;
+                  }
+                }
+                span{
+                  color:$orange;
+                }
+                .btn{
+                  &:after{
+                    background-color:$orange;
+                  }
+                }
+                .services{
+                  border-color:$orange;
+                  .btn{
+                    &:before{
+                      background-color:$orange;
+                    }
+                    &:after{
+                      background-color:$black;
+                    }
+                  }
+                  ul{
+                    li{
+                      a{
+                        &:hover{
+                          color:$orange;
+                        }
+                      }
+                    }
+                  }
+                }
+                .aside-menu{
+                  h4{
+                    a{
+                      padding-left:$spacer * 1;
+                      line-height: 50px;
+                      text-transform: uppercase;
+                      display: inline-block;
+                      font-size: 1rem;
+                      font-family: $super-font;
+                    }
+                  }
+                  background-color:$orange;
+                  transition:0.18s;
+                  &:hover{
+                    background-color:$dark-orange;
+                    a{
+                      &:before{
+                        background-color:$dark-orange;
+                      }
+                    }
+                  }
+                }
+              }
+              &.grey,&.websites,&.web-design{
+                  .stat-block{
+                    background-color:$grey;
+                  }
+                  .service-main-sec{
+                    h1,h2,h3,h4,h5{
+                      color:$grey;
+                    }
+                  }
+                  article{
+                    h2{
+                      color:$grey;
+                    }
+                  }
+                  span{
+                    //color:$grey;
+                    color:#838382;
+                  }
+                  .btn{
+                    &:after{
+                      background-color:$grey;
+                    }
+                  }
+                  .services{
+                    border-color:$grey;
+                    .btn{
+                      &:before{
+                        background-color:$grey;
+                      }
+                      &:after{
+                        background-color:$black;
+                      }
+                    }
+                    ul{
+                      li{
+                        a{
+                          &:hover{
+                            color:$grey;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .aside-menu{
+                    h4{
+                      a{
+                        padding-left:$spacer * 1;
+                        line-height: 50px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        font-size: 1rem;
+                        font-family: $super-font;
+                      }
+                    }
+                    background-color:$grey;
+                    transition:0.18s;
+                    &:hover{
+                      background-color:$dark-grey;
+                      a{
+                        &:before{
+                          background-color:$dark-grey;
+                        }
+                      }
+                    }
+                  }
+                }
+}
+.service-menu-title{
+  font-size: 1.5rem !important;
+  text-transform: capitalize !important;
+  text-align:left;
+}
+.anchor-point {
+  display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+.mini-ad, {
+  background-color:$grey;
+  padding:($spacer * 4) 15%;
+  text-align: center;
+  margin-bottom:$spacer;
+  color:$white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  p{
+    margin-bottom:1.5rem;
+    margin-top:1rem;
+  }
+}
+.new-ad-style{
+  position: relative;
+  //border: 1px solid $blue;
+ text-align: center;
+ margin-bottom:$spacer;
+ color:$white;
+ .overlay{
+   position:absolute;
+   bottom:10px;
+
+   left:0;
+   right:0;
+   margin:0 auto;
+   @include media-breakpoint-down(lg) {
+      bottom:0;
+   }
+   @include media-breakpoint-down(md) {
+      bottom:0;
+      width:80%;
+   }
+ }
+ h3{
+   color:$black;
+   margin-bottom:1.5rem;
+   margin-top:1rem;
+ }
+}
+
+//webpage // // hack
+
+.two-columns.web-design .single-posts.ad-section .overlay{
+  background-color:transparent;
+  h2,p{
+    color:$black;
+  }
+}

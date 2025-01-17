@@ -1,0 +1,332 @@
+.container.intro{
+  max-width:1400px;
+}
+
+.intro{
+  margin-top:$spacer * 5;
+  @include media-breakpoint-down(sm) {
+    margin-top:$spacer * 2;
+    margin-bottom:$spacer * 2;
+  }
+  h3{
+    margin-bottom:$spacer;
+    font-family:$super-font;
+  }
+}
+.info{
+  margin-bottom:5rem;
+  .box{
+      flex: 0 0 31.33333%;
+      margin-left:1%;
+      border: $border-width solid blue;
+      @include media-breakpoint-down(lg) {
+        flex: 0 0 100%;
+        margin-left:0;
+        margin-bottom:$spacer * 2;
+
+      }
+      &:first-child{
+        margin-left:0;
+      }
+      &.green{
+        border-color:$green;
+        h2{
+          color:$green;
+        }
+      }
+      &.blue{
+        border-color:$blue;
+        h2{
+          color:$blue;
+        }
+      }
+      &.pink{
+        border-color:$pink;
+        h2{
+          color:$pink;
+        }
+      }
+      &.yellow{
+        border-color:$yellow;
+        h2{
+          color:$yellow;
+        }
+      }
+      &.orange{
+          border-color:$orange;
+        h2{
+          color:$orange;
+        }
+      }
+      &.grey{
+          border-color:$grey;
+        h2{
+          color:$grey;
+        }
+      }
+    & > div{
+      padding:$spacer * 1.5;
+      p:last-child{
+        padding-bottom:0;
+        margin-bottom:0;
+      }
+    }
+  }
+}
+.tect-service-article{
+  margin-top:$spacer * 3;
+  background-color:$black;
+  .services{
+    border-top:solid 2px $white;
+    padding-top:$spacer;
+    padding-bottom:$spacer;
+    //margin-top:$spacer;
+    color:$white;
+  }
+}
+.services-tect{
+  color:$white;
+  border-top: 2px solid white;
+  margin:$spacer * 2;
+  h5{
+
+  }
+}
+.services-page{
+  border-top:solid 1px $black;
+  padding-top:$spacer * 1.5 !important;
+  &.tech{
+    a{
+      color:$white;
+      text-decoration:underline;
+    }
+    &.applications-text{
+      a:hover{
+        color:$blue;
+      }
+    }
+    &.digital-marketing-text,&.digital-text{
+      a:hover{
+        color:$pink;
+      }
+    }
+    &.ecommerce-text{
+        a:hover{
+        color:$green;
+
+      }
+    }
+    &.yellow-text{
+        a:hover{
+        color:$green;
+
+      }
+    }
+  }
+  &.yellow, &.applications, &.digital-marketing, &.digital, &.ecommerce{
+    background-color:$yellow;
+    .tech-servs{
+      font-size:1.4rem;
+      line-height:1.7rem;
+      padding-left:4.5rem;
+      padding-right:4.5rem;
+      font-family: $super-font;
+      @include media-breakpoint-down(lg) {
+        padding-left:2.5rem;
+        padding-right:2.5rem;
+      }
+    }
+  }
+  &.applications{
+    background-color:$blue;
+
+  }
+  &.digital, &.digital-marketing{
+    background-color:$pink;
+  }
+  &.ecommerce{
+    background-color:$green;
+  }
+  &.tech{
+    border-top:solid 3px $white;
+    color:$white;
+    padding-top:$spacer * 2.5 !important;
+    padding-bottom:$spacer * 1.5;
+
+    h5{
+      margin-top:0;
+    }
+    .service-content{
+      padding-right:$spacer * 3;
+      @include media-breakpoint-down(lg) {
+        padding-right:1rem;
+      }
+    }
+    .tech-servs{
+
+      h5{
+        text-align:center;
+        @include media-breakpoint-down(lg) {
+          font-size:12px;
+        }
+      }
+      img{
+        display:block;
+        margin:0 auto $spacer;
+      }
+    }
+  }
+  //margin-top:$spacer;
+  &:last-child{
+    margin-bottom:$spacer * 3;
+  }
+
+
+  h5{
+    font-size: 12px;
+    @include media-breakpoint-down(lg) {
+      font-size:16px;
+      margin-bottom:20px;
+      margin-top:20px;
+    }
+    //margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top:1rem;
+    //text-align:center;
+  }
+  .line{
+    margin-bottom:$spacer * 2;
+    @include media-breakpoint-down(sm) {
+      margin-bottom:$spacer * 1;
+    }
+    h2{
+      a{
+        text-decoration: none;
+        &:hover{
+          color:$black;
+        }
+      }
+    }
+    a{
+      text-decoration: underline;
+      margin-top:$spacer * 0.5;
+      display:block;
+      font-family:$super-font;
+    }
+    &.green, &.ecommerce{
+      h2{
+        color:$green;
+        border-color:$green;
+      }
+      .read-more{
+        color:$green;
+        &:hover{
+          color:$black;
+        }
+      }
+      a{
+        &:hover{
+          color:$green;
+        }
+      }
+    }
+    &.blue, &.application{
+      h2{
+        border-color:$blue;
+      }
+      .read-more{
+        color:$blue;
+        &:hover{
+          color:$black;
+        }
+      }
+      a{
+        &:hover{
+          color:$blue;
+        }
+      }
+    }
+    &.pink, &.digital-marketing{
+      h2{
+        border-color:$pink;
+      }
+      .read-more{
+        color:$pink;
+        &:hover{
+          color:$black;
+        }
+      }
+      a{
+        &:hover{
+          color:$pink;
+        }
+      }
+    }
+    &.yellow, &.technology{
+      h2{
+        border-color:$yellow;
+      }
+      .read-more{
+        color:$yellow;
+        &:hover{
+          color:$black;
+        }
+      }
+      a{
+        &:hover{
+          color:$yellow;
+        }
+      }
+    }
+    &.orange{
+      .read-more{
+        color:$orange;
+        &:hover{
+          color:$black;
+        }
+      }
+      h2{
+        border-color:$orange;
+      }
+      a{
+        &:hover{
+          color:$orange;
+        }
+      }
+    }
+    &.grey, &.web-design{
+      .read-more{
+        color:$grey;
+        &:hover{
+          color:$black;
+        }
+      }
+      h2{
+        border-color:$grey;
+      }
+      a{
+        &:hover{
+          color:$grey;
+        }
+      }
+    }
+    h2{
+      border-bottom:($border-width * 3) solid;
+      padding-bottom:$spacer * 0.8;
+      margin-bottom:$spacer * 1.5;
+    }
+  }
+}
+
+.page-template-our-way-remade{
+  h2{
+    font-size:3rem;
+    @include media-breakpoint-down(lg) {
+      font-size:2rem;
+    }
+  }
+  h3{
+    margin-bottom:1.5rem;
+  }
+}
